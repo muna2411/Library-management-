@@ -1,0 +1,27 @@
+[
+    {
+      "service_id": 101,
+      "relevant_id": "LIB-001",
+      "relevant_image": "library1.jpg",
+      "category_name": "Public Library"
+    },
+    {
+      "service_id": 102,
+      "relevant_id": "LIB-002",
+      "relevant_image": "library2.jpg",
+      "category_name": "University Library"
+    },
+    {
+      "service_id": 103,
+      "relevant_id": "LIB-003",
+      "relevant_image": "library3.jpg",
+      "category_name": "Community Library"
+    },
+    {
+      "service_id": 104,
+      "relevant_id": "LIB-004",
+      "relevant_image": "library4.jpg",
+      "category_name": "Digital Library"
+    }
+  ]
+  
