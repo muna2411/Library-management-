@@ -10,11 +10,11 @@ const Navbar = () => {
         <i className="text-[#A0522D] text-[50px] font-bold ">Wisdom</i>
       
         <nav className="text-[#513a24] text-[20px]  font-semibold ml-[100px]">
-            <NavLink exact activeClassName="active-link " className ="mr-[20px] " to="/">Home</NavLink>
-            <NavLink activeClassName="active-link" className ="mr-[20px]" to="/addbook">Add Book</NavLink>
-            <NavLink activeClassName="active-link" className ="mr-[20px]" to="/allbook">All Book</NavLink>
-            <NavLink activeClassName="active-link" className ="mr-[20px]" to="/borrowedbook">Borrowed Book</NavLink>
-            <NavLink activeClassName="active-link" className ="mr-[20px]" to="/login">Login</NavLink>
+            <NavLink  className ="mr-[20px] " to="/">Home</NavLink>
+            <NavLink  className ="mr-[20px]" to="/addbook">Add Book</NavLink>
+            <NavLink  className ="mr-[20px]" to="/allbook">All Book</NavLink>
+            <NavLink  className ="mr-[20px]" to="/borrowedbook">Borrowed Book</NavLink>
+            <NavLink  className ="mr-[20px]" to="/login">Login</NavLink>
         </nav>
     </div>
     <div>

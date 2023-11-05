@@ -1,27 +1,27 @@
 [
-    {
-      "service_id": 101,
-      "relevant_id": "LIB-001",
-      "relevant_image": "library1.jpg",
-      "category_name": "Public Library"
-    },
-    {
-      "service_id": 102,
-      "relevant_id": "LIB-002",
-      "relevant_image": "library2.jpg",
-      "category_name": "University Library"
-    },
-    {
-      "service_id": 103,
-      "relevant_id": "LIB-003",
-      "relevant_image": "library3.jpg",
-      "category_name": "Community Library"
-    },
-    {
-      "service_id": 104,
-      "relevant_id": "LIB-004",
-      "relevant_image": "library4.jpg",
-      "category_name": "Digital Library"
-    }
-  ]
+  {
+    "id": 1,
+    "category_name": "Thiller",
+    "image": "https://i.ibb.co/0X8SqCy/c2.jpg" 
+
+  },
+  {
+    "id": 2,
+    "category_name": "History",
+    "image": "https://i.ibb.co/zX4MQKp/c4.jpg" 
+   
+  },
+  {
+    "id": 3,
+    "category_name": "Novel",
+    "image": "https://i.ibb.co/Dfsf0mv/c1.jpg" 
   
+  },
+  {
+    "id": 4,
+    "category_name": "Sci-fi",
+    "image": "https://i.ibb.co/xLjJNfS/c3.jpg" 
+   
+  }
+ 
+]
