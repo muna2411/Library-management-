@@ -17,7 +17,7 @@ const Card = ({cards}) => {
                     <div className='mb-[-520px] hero-overlay bg-opacity-60 h-[80px]'>
                     <div className='flex justify-around items-center'>
                     <i className='text-[50px] text-white text-center'>{category_name}</i>
-                    <Link to={`/book/${category_name}`}>  <button className='text-white text-[20px]' style={{ textDecoration: 'underline'}}>Show More</button> </Link>
+                    <Link to={`/book`}>  <button className='text-white text-[20px]' style={{ textDecoration: 'underline'}}>Show More</button> </Link>
                     </div>
                     </div>
                     </div>

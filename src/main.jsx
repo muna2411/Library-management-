@@ -9,7 +9,15 @@ import Main from './components/Main';
 import Home from './components/Home';
 import AddBook from './components/AddBook';
 import Service from './components/Service';
-import Detail from './components/Detail';
+import AuthProvider from './components/AuthProvider';
+import Login from './components/Login';
+import Register from './components/Register';
+import Dead from './components/Dead';
+import Allbook from './components/Allbook';
+import Update from './components/Update';
+import PrivateRoutes from './components/PrivateRoutes';
+import MyCart from './components/MyCart';
+
 
 const router = createBrowserRouter([
   {
@@ -23,25 +31,56 @@ const router = createBrowserRouter([
       },
       {
         path:"/addbook",
-        element:<AddBook></AddBook>
+        element:<PrivateRoutes><AddBook></AddBook></PrivateRoutes>
       },
       {
-        path:'/book/:category_name',
-        element:<Service></Service>,
-        loader: () => fetch('http://localhost:5000/book')
+        path:'/book',
+        element:<PrivateRoutes><Service></Service></PrivateRoutes>,
+        loader: () => fetch('http://localhost:5000/book'),
       },
       {
         path:'/book/:id',
-        element:<Detail></Detail>,
+        element:<PrivateRoutes><Dead></Dead></PrivateRoutes>,
+        loader: ({params}) => fetch(`http://localhost:5000/book/${params.id}`)
+       },
+      {
+         path:'/login',
+         element:<Login></Login>
+      },
+      {
+        path: '/register',
+        element:<Register></Register>
+      },
+ 
+      {
+        path:'/allbook',
+        element:<Allbook></Allbook>,
+        loader: () => fetch('http://localhost:5000/book'),
+      },
+      {
+        path: '/update/:id',
+        element: <Update></Update>,
         loader:({params}) => fetch(`http://localhost:5000/book/${params.id}`)
+      },
+
+     {
+        path:'/mycart',
+        element:<PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
+        loader:() =>  fetch('http://localhost:5000/cart')
+      },
+      {
+        path:'/mycart/:id',
+        element:<PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
+        loader:({params}) =>  fetch(`http://localhost:5000/cart/${params}`)
       }
-      
     ]
-  },
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+   <AuthProvider>
+   <RouterProvider router={router} />
+   </AuthProvider>
   </React.StrictMode>,
 )
