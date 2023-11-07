@@ -7,6 +7,7 @@ import { useState } from 'react';
 
 const AddBook = () => {
   const [ratings, setRatings] = useState(0);
+  
   const handleAddBook = event =>{
     event.preventDefault();
     const form = event.target;
