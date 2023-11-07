@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import Rating from "react-rating";
-import { Link, unstable_HistoryRouter, useLoaderData, useParams } from "react-router-dom";
+import { Link,  useLoaderData, useParams } from "react-router-dom";
 
 
 const Dead = () => {
@@ -10,8 +10,6 @@ const loadedUsers =useLoaderData();
 const {_id} = useParams();
 const [cardDetails, setCardDetails] = useState(loadedUsers);
 const [returndate, setReturnDate] = useState(""); 
-//const history = unstable_HistoryRouter();
-
 
     useEffect(() => {
         fetch(`/book/${_id}`)
@@ -21,17 +19,17 @@ const [returndate, setReturnDate] = useState("");
       
 
       const handlecheckout = (event)=>{
+        
         event.preventDefault();
       const name =cardDetails.name;
       const category_name =cardDetails.category_name;
       const image =cardDetails.image;
       const author =cardDetails.author;
       const ratings =cardDetails.ratings;
-      const returndate = cardDetails.returndate;
+     
         
-      const cart = {name,category_name,image,ratings,author,returndate};
-        
-      //console.log(cart)
+      const cart = {name,category_name,image,ratings,author};
+
    
 
       fetch('http://localhost:5000/cart' ,{
@@ -44,8 +42,12 @@ const [returndate, setReturnDate] = useState("");
             .then(res => res.json())
             .then(data =>{
               console.log(data)
-             // history.push("/mycart");
+             
             })
+            const modal = document.getElementById('my_modal_5');
+  modal.close();
+  window.location.href = '/mycart';
+  
             }    
 
 
@@ -88,7 +90,7 @@ const [returndate, setReturnDate] = useState("");
                     <p className=" text-[45px] font-bold my-[10px] text-[#A0522D] text-center" >{cardDetails.name}</p>
                       <p className=" text-[25px] text-[#808080] my-[10px] text-center">{cardDetails.author}</p>
                       <p className=" text-[18px]  my-[10px] text-center">{cardDetails.description}</p>
-                      <p className="text-[18px] my-[10px] text-center">{cardDetails.returndate}</p>
+                     
 
                       <Rating className="ml-[220px] mt-[20px]"
                   emptySymbol={<FaStar color="gray" size={20} />}
