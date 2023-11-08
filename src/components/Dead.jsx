@@ -194,11 +194,9 @@ const handlePdf = (event) => {
     </div>
     <Link > <button onClick={handlePdf} className="btn" style={{ border: "3px solid black" }}>Read</button></Link>
 
-    </div>
-                  
+    </div>              
   </div>
   </div>
-
   </div>
   <div>
       <img className="h-[1200px] w-[500px]" src="https://i.ibb.co/Hzmd1Nj/x3.jpg" ></img>
