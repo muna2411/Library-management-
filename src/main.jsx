@@ -17,12 +17,16 @@ import Allbook from './components/Allbook';
 import Update from './components/Update';
 import PrivateRoutes from './components/PrivateRoutes';
 import MyCart from './components/MyCart';
+import ErrorPage from './components/ErrorPage';
+import Pdf from './components/Pdf';
+
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children:[
       {
         path:"/",
@@ -66,14 +70,23 @@ const router = createBrowserRouter([
      {
         path:'/mycart',
         element:<PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
-        loader:() =>  fetch('http://localhost:5000/cart')
+        //loader:() =>  fetch('http://localhost:5000/cart')
       },
       {
         path:'/mycart/:id',
         element:<PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
         loader:({params}) =>  fetch(`http://localhost:5000/cart/${params.id}`)
-      }
-    ]
+      },
+      {
+        path:'/pdf',
+        element:<PrivateRoutes><Pdf></Pdf></PrivateRoutes>,
+       
+      },
+   
+   
+
+   
+     ]
   }
 ]);
 

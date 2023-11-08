@@ -26,11 +26,13 @@ const Navbar = () => {
 
     return (
        
-<div className="flex justify-between items-center mx-[20px] mt-[-50px]">
-    <div className="flex  items-center justify-center">
-        <img className="w-[150px] h-[240px] " src="https://i.ibb.co/bgGpjTM/final.jpg"></img>
+<div className="lg:flex justify-between items-center mx-[20px] mt-[-50px] sm:flex-col-1">
+    <div className="lg:flex  items-center justify-center sm:flex-col-1">
+       <div className="flex justify-around items-center">
+       <img className="w-[150px] h-[240px] " src="https://i.ibb.co/bgGpjTM/final.jpg"></img>
         
         <i className="text-[#A0522D] text-[50px] font-bold ">Wisdom</i>
+       </div>
       
         <nav className="text-[#513a24] text-[20px]  font-semibold ml-[100px]">
             <NavLink  className ="mr-[20px] " to="/">Home</NavLink>

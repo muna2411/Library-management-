@@ -6,8 +6,8 @@ import Adver from "./Adver";
 const Service = () => {
     const loadedUsers =useLoaderData();
    
-    //const {category_name} = useParams();
-   //const filter = loadedUsers.filter(p => p.category_name === category_name);
+//     const {category_name} = useParams();
+//    const filter = loadedUsers.filter(p => p.category_name === category_name);
     return (
         <div >
           <Adver></Adver>

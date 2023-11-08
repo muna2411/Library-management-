@@ -1,7 +1,8 @@
-import {  useEffect, useState } from "react";
+import {  useContext, useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import Rating from "react-rating";
 import { Link,  useLoaderData, useParams } from "react-router-dom";
+import { AuthContext } from "./AuthProvider";
 
 
 const Dead = () => {
@@ -17,15 +18,13 @@ const [quantity,setQuantity] =useState(0);
 const [remainingQuantity, setRemainingQuantity] = useState(0);
 
 
-// useEffect(() =>{
-//   if (cardDetails.quantity) {
-//     setQuantity(cardDetails.quantity);
-//   }
-// }, [cardDetails.quantity]);
 
+//email
+
+const { user } = useContext(AuthContext);
+  
 //quantity
 useEffect(() => {
-  
   const remaining = cardDetails.quantity - quantity;
   setRemainingQuantity(remaining);
 }, [cardDetails, quantity]);
@@ -39,23 +38,6 @@ useEffect(() => {
       setReturnDate(data.returndate);
     });
 }, []);
-
-
-// const updateReturnDate = () => {
-//   const updatedCart = { ...cart, returndate: returnDate };
-
-//   fetch(`/cart/${cartId}`, {
-//     method: "PUT",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(updatedCart),
-//   })
-//     .then((response) => response.json())
-//     .then((data) => {
-//       setCart(data);
-//     });
-// };
 
 
 
@@ -87,10 +69,11 @@ useEffect(() => {
       const image =cardDetails.image;
       const author =cardDetails.author;
       const ratings =cardDetails.ratings;
+      const description =cardDetails.description;
       const selectedQuantity = quantity;
       const selectedReturndate = returnDate;
-
-      const cart = {name,category_name,image,ratings,author , returnDate:selectedReturndate ,quantity : selectedQuantity};
+      const email = user?.email
+      const cart = {name,category_name,image,ratings,author , returnDate:selectedReturndate ,quantity : selectedQuantity,email,description};
       console.log(cart)
 
       const remaining = cardDetails.quantity - selectedQuantity;
@@ -113,24 +96,35 @@ useEffect(() => {
             const modal = document.getElementById('my_modal_5');
             modal.close();
             window.location.href = '/mycart';
-            }    
+              
        
+
+}
+
+
+const handlePdf = (event) => {
+  event.preventDefault();
+  const description = cardDetails.description;
+  const image = cardDetails.image;
+  const name = cardDetails.name;
+  window.location.href = `/pdf?description=${description}&image=${image}&name=${name}`;
+};
 
           
     return (
         <div>
-        <div className="flex justify-around items-center">
+        <div className="lg:flex justify-around items-center sm:flex-col-1">
         
-        <div className=" justify-around items-center my-[30px]" >
+        <div className=" justify-around items-center my-[30px] " >
                 <div>
-                    <img className="h-[550px] w-[400px] lg:ml-[200px] sm:ml-[50px] " style={{ border: "2px solid black" }} src={cardDetails.image}></img>
+                    <img className="h-[550px] w-[400px] lg:ml-[200px] sm:ml-[100px] " style={{ border: "2px solid black" }} src={cardDetails.image}></img>
                 </div>
-                <div className="card shadow-xl px-[30px]  lg:w-[600px] sm:h-[800px] sm:w-[500px] ml-[100px] mt-[-120px]">
+                <div className="card shadow-xl px-[30px]  lg:w-[600px] lg:h-[900px] sm:h-[800px] sm:w-[500px] lg:ml-[100px] mt-[-120px] sm:ml-[50px]">
                     <div className="mt-[100px]">
                     <p className=" text-[45px] font-bold my-[10px] text-[#A0522D] text-center" >{cardDetails.name}</p>
                       <p className=" text-[25px] text-[#808080] my-[10px] text-center">{cardDetails.author}</p>
                       <p className=" text-[18px]  my-[10px] text-center">{cardDetails.description}</p>
-                
+                      <p className=" text-[18px]  my-[10px] text-center">{user.email}</p>
                       <Rating className="ml-[220px] mt-[20px]"
                   emptySymbol={<FaStar color="gray" size={20} />}
                   fullSymbol={<FaStar color="gold" size={20} />}
@@ -168,7 +162,7 @@ useEffect(() => {
             
 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
   <div className="modal-box">
-   <img className="w-[250px] h-[250px] ml-[100px]" src="https://i.ibb.co/dbPg8qS/hi.png"></img>
+   <img className="w-[250px] h-[250px] lg:ml-[100px] sm:ml-[200px]" src="https://i.ibb.co/dbPg8qS/hi.png"></img>
 
    <form onSubmit={handlecheckout}>
 
@@ -187,33 +181,30 @@ useEffect(() => {
   style={{ border: "3px solid black" }}
   required
 />
+</div>
 
-   </div>
-
-  <div className="modal-action">
+<div className="modal-action">
      <Link to={`/mycart`}> 
       <input onClick={ handlecheckout} type="submit" value="Submit" className="btn"/>
     </Link> 
-  </div>
+</div>
 </form>
+</div>
+</dialog>
+    </div>
+    <Link > <button onClick={handlePdf} className="btn" style={{ border: "3px solid black" }}>Read</button></Link>
 
+    </div>
+                  
+  </div>
+  </div>
 
   </div>
-</dialog>
-                    </div>
-                <button  className="btn" style={{ border: "3px solid black" }}>Read</button>
-                    </div>
-                    
-                    
-                </div>
-                </div>
-
-              </div>
-              <div>
-                <img className="h-[1200px] w-[500px]" src="https://i.ibb.co/Hzmd1Nj/x3.jpg" ></img>
-              </div>
-                </div>
-                </div>
+  <div>
+      <img className="h-[1200px] w-[500px]" src="https://i.ibb.co/Hzmd1Nj/x3.jpg" ></img>
+  </div>
+  </div>
+   </div>
     );
 };
 

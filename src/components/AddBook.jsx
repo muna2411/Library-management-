@@ -51,28 +51,28 @@ const AddBook = () => {
   <div >
     <div >
     <form onSubmit={handleAddBook} className="grid lg:grid-cols-3 sm:grid-cols-1 lg:m-[50px] sm:m-[10px]">
-              <div className="form-control m-[50px]">
+              <div className="form-control m-[50px] lg:w-[500px] sm:w-[500px]">
                 <label className="label">
                   <span className="label-text text-[20px] text-white font-semibold">Name</span>
                 </label>
                 <input type="text" placeholder="Type name" name="name" className="input input-bordered " style={{ border: "3px solid black" }} required />
               </div>
 
-              <div className="form-control m-[50px]">
+              <div className="form-control m-[50px] lg:w-[500px] sm:w-[500px]">
                 <label className="label">
                   <span className="label-text text-[20px] text-white font-semibold">Author Name</span>
                 </label>
                 <input type="text" placeholder="Type Author name" name="author" className="input input-bordered"  style={{ border: "3px solid black" }} required />
               </div>
 
-              <div className="form-control m-[50px]">
+              <div className="form-control m-[50px] lg:w-[500px] sm:w-[500px]">
                 <label className="label">
                   <span className="label-text text-[20px] text-white font-semibold">Quantity of the Book</span>
                 </label>
                 <input type="text" placeholder="Type quantity" name="quantity" className="input input-bordered" style={{ border: "3px solid black" }} required />
               </div> 
 
-              <div className="form-control m-[50px]">
+              <div className="form-control m-[50px] lg:w-[500px] sm:w-[500px]">
                 <label className="label">
                   <span className="label-text text-[20px] text-white font-semibold">Category</span>
                 </label>
@@ -85,7 +85,7 @@ const AddBook = () => {
               </select>
               </div>
 
-              <div className="form-control m-[50px]">
+              <div className="form-control m-[50px] lg:w-[500px] sm:w-[500px]">
                 <label className="label">
                   <span className="label-text text-[20px] text-white font-semibold">Short Description</span>
                 </label>
@@ -115,7 +115,7 @@ const AddBook = () => {
               <input type="submit" value="Add Book" className="btn bg-[#A0522D] text-white form-control lg:mt-[300px] sm:mt-[50px] w-[150px] h-[60px]  ml-[200px]"  style={{ border: "3px solid white" }}/>
              
         </form> 
-        <img className='ml-[1200px] mt-[-450px]' src='https://i.ibb.co/rG3KrNm/1.png'></img>
+        <img className='lg:ml-[1200px] lg:mt-[-450px] sm:ml-[200px] sm:mt-[-100px]' src='https://i.ibb.co/rG3KrNm/1.png'></img>
     </div>
   </div>
 </div>

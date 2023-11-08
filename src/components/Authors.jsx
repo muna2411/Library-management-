@@ -28,23 +28,23 @@ const Authors = () => {
     >
       <SwiperSlide>
       <img className="w-[300px] h-[300px]" style={{ borderRadius: "50%"}} src="https://i.ibb.co/tmXdvTd/au1.jpg"></img>
-      <p className="text-center text-[20px] mr-[70px] mt-[20px]">Neil Gaiman</p>
+      <p className="text-center text-[20px] mr-[70px] mt-[20px] text-black dark:text-white">Neil Gaiman</p>
       </SwiperSlide>
       <SwiperSlide>
       <img className="w-[300px] h-[300px]" style={{ borderRadius: "50%"}} src="https://i.ibb.co/kBTbvYF/au2.jpg"></img>
-      <p className="text-center text-[20px] mr-[70px] mt-[20px]">Zadie Smith</p>
+      <p className="text-center text-[20px] mr-[70px] mt-[20px] text-black dark:text-white">Zadie Smith</p>
       </SwiperSlide>
       <SwiperSlide>
       <img className="w-[300px] h-[300px]" style={{ borderRadius: "50%"}} src="https://i.ibb.co/LvWhZQj/au3.jpg"></img>
-      <p className="text-center text-[20px] mr-[70px] mt-[20px]">Mario Smith</p>
+      <p className="text-center text-[20px] mr-[70px] mt-[20px] text-black dark:text-white">Mario Smith</p>
       </SwiperSlide>
       <SwiperSlide>
       <img className="w-[300px] h-[300px]" style={{ borderRadius: "50%"}} src="https://i.ibb.co/0YrvSQb/au4.jpg"></img>
-      <p className="text-center text-[20px] mr-[70px] mt-[20px]">Angela Carter</p>
+      <p className="text-center text-[20px] mr-[70px] mt-[20px] text-black dark:text-white">Angela Carter</p>
       </SwiperSlide>
       <SwiperSlide>
       <img className="w-[300px] h-[300px]" style={{ borderRadius: "50%"}} src="https://i.ibb.co/VMC0jcw/au5.jpg"></img>
-      <p className="text-center text-[20px] mr-[70px] mt-[20px]">Louise Erdrich</p>
+      <p className="text-center text-[20px] mr-[70px] mt-[20px] text-black dark:text-white">Louise Erdrich</p>
       </SwiperSlide>
     
    
