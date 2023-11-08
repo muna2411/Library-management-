@@ -8,8 +8,7 @@ const Card = ({cards}) => {
 
     return (
         <div>
-            
-            <div >
+<div >
                 <div >
            
                    <div  className='hero w-[320px] '> 
