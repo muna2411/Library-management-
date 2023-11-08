@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>,
-        loader: () => fetch('http://localhost:5000/service')
+        loader: () => fetch('https://library-management-server-m6953v9vm-munas-projects.vercel.app/service')
       },
       {
         path:"/addbook",
@@ -40,12 +40,12 @@ const router = createBrowserRouter([
       {
         path:'/book',
         element:<PrivateRoutes><Service></Service></PrivateRoutes>,
-        loader: () => fetch('http://localhost:5000/book'),
+        loader: () => fetch('https://library-management-server-m6953v9vm-munas-projects.vercel.app/book'),
       },
       {
         path:'/book/:id',
         element:<PrivateRoutes><Dead></Dead></PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:5000/book/${params.id}`)
+        loader: ({params}) => fetch(`https://library-management-server-m6953v9vm-munas-projects.vercel.app/book/${params.id}`)
        },
       {
          path:'/login',
@@ -59,23 +59,23 @@ const router = createBrowserRouter([
       {
         path:'/allbook',
         element:<Allbook></Allbook>,
-        loader: () => fetch('http://localhost:5000/book'),
+        loader: () => fetch('https://library-management-server-m6953v9vm-munas-projects.vercel.app/book'),
       },
       {
         path: '/update/:id',
         element: <Update></Update>,
-        loader:({params}) => fetch(`http://localhost:5000/book/${params.id}`)
+        loader:({params}) => fetch(`https://library-management-server-m6953v9vm-munas-projects.vercel.app/book/${params.id}`)
       },
 
      {
         path:'/mycart',
         element:<PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
-        //loader:() =>  fetch('http://localhost:5000/cart')
+        //loader:() =>  fetch('https://library-management-server-6hs6jxp66-munas-projects.vercel.app/cart')
       },
       {
         path:'/mycart/:id',
         element:<PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
-        loader:({params}) =>  fetch(`http://localhost:5000/cart/${params.id}`)
+        loader:({params}) =>  fetch(`https://library-management-server-m6953v9vm-munas-projects.vercel.app/cart/${params.id}`)
       },
       {
         path:'/pdf',

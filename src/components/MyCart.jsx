@@ -12,7 +12,7 @@ const MyCart = () => {
     const [bookings , setBookings] = useState([]);
     const { user } = useContext(AuthContext);
         
-    const url = `http://localhost:5000/cart?email=${user?.email}`;
+    const url = `https://library-management-server-m6953v9vm-munas-projects.vercel.app/cart?email=${user?.email}`;
     useEffect(() =>{
         fetch(url)
         .then(res => res.json())

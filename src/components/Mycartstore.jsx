@@ -22,7 +22,7 @@ const Mycartstore = ({booking, bookings , setBookings}) => {
             if (result.isConfirmed) {
 
                console.log('confirm')
-                fetch(`http://localhost:5000/cart/${_id}`, {
+                fetch(`https://library-management-server-m6953v9vm-munas-projects.vercel.app/cart/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

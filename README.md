@@ -1,8 +1,11 @@
-# React + Vite
+# https://assignment11-65825.web.app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. useState() : It is used to manage and update the state . here are two components .first will be the state value and second will be the updated value .
 
-Currently, two official plugins are available:
+2. useEffect() : It is used for fetch the json data .
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. useContext() : It is a way to share data between coponents .
+
+4. signInWithEmailAndPassword : It is used for signin the login form with email and passwod which will same as register form for user.
+
+5. createUserWithEmailAndPassword : It is used for create the register email and passwod for user.
