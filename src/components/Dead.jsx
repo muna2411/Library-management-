@@ -79,7 +79,7 @@ useEffect(() => {
       const remaining = cardDetails.quantity - selectedQuantity;
       setRemainingQuantity(remaining);
 
-      fetch('https://library-management-server-2ad0qlyqe-munas-projects.vercel.app/cart' ,{
+      fetch('https://library-management-server-6mvnu6sz2-munas-projects.vercel.app/cart' ,{
               method: 'POST',
               headers:{
                 'content-type' : 'application/json'

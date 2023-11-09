@@ -7,7 +7,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 const Banner = () => {
     return (
         <div>
-        <div className='my-[30px] lg:w-[1550px] sm:w-[630px] h-[700px] lg:mx-[110px] sm:mx[0px] lg:mt-[-20px] sm:mt-[50px]'>
+        <div className='my-[30px] lg:w-[1500px] sm:w-[630px] h-[700px] lg:mx-[50px] sm:mx[0px] lg:mt-[-20px] sm:mt-[50px]'>
           
     <Swiper
      spaceBetween={30}
