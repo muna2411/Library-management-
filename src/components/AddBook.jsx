@@ -22,7 +22,7 @@ const AddBook = () => {
     const user = {name,author,quantity,category_name ,description,ratings,image};
     console.log(user);
   
-    fetch('https://library-management-server-j91bqh6ya-munas-projects.vercel.app/book',{
+    fetch('https://library-management-server-2ad0qlyqe-munas-projects.vercel.app/book',{
       method: 'POST',
       headers:{
         'content-type' : 'application/json'
