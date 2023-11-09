@@ -42,7 +42,7 @@ const Home = () => {
 </label>
             </button>
              <Banner></Banner>
-             <div className="grid lg:grid-cols-4 sm:grid-cols-1 lg:mx-[200px] mb-[200px] sm:mx-[150px]">
+             <div className="grid lg:grid-cols-4 sm:grid-cols-1 lg:mx-[150px] mb-[200px] sm:mx-[150px]">
                
                {
                    cards.map(card => <Card key={card.id} cards={card}></Card>)

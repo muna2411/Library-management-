@@ -11,8 +11,8 @@ const Card = ({cards}) => {
 <div >
                 <div >
            
-                   <div  className='hero w-[320px] '> 
-                    <img className='w-[320px] h-[600px]' src={image}  />
+                   <div  className='hero w-[300px] '> 
+                    <img className='w-[300px] h-[600px]' src={image}  />
                     <div className='mb-[-520px] hero-overlay bg-opacity-60 h-[80px]'>
                     <div className='flex justify-around items-center'>
                     <i className='text-[50px] text-white text-center'>{category_name}</i>
