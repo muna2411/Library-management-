@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         element:<PrivateRoutes><AddBook></AddBook></PrivateRoutes>
       },
       {
-        path:'/book/:category_name',
+        path:'/book',
         element:<PrivateRoutes><Service></Service></PrivateRoutes>,
         loader: () => fetch('https://library-management-server-2ad0qlyqe-munas-projects.vercel.app/book'),
       },
