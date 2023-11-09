@@ -1,4 +1,4 @@
-# https://assignment11-65825.web.app/
+# https://assignment11-65825.web.app
 
 1. useState() : It is used to manage and update the state . here are two components .first will be the state value and second will be the updated value .
 
