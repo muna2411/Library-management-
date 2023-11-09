@@ -72,7 +72,7 @@ else if(!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(pass)){
         
         return (
             <div>
-                <div className="divider lg:w-[1500px] sm:w-[450px] lg:mx-[180px] sm:mx-[100px] mb-[100px]">  <h2 className="text-[#A0522D] text-[60px] font-bold ">Wisdom</h2> </div>
+                <div className="divider lg:w-[1400px] sm:w-[450px] lg:mx-[180px] sm:mx-[100px] mb-[100px]">  <h2 className="text-[#A0522D] text-[60px] font-bold ">Wisdom</h2> </div>
                 <div className="lg:flex justify-between items-center ">
         
                 
