@@ -53,7 +53,7 @@ const Login = () => {
         }
         return (
          <div>
-             <div className="divider lg:w-[1500px] sm:w-[450px] lg:mx-[180px] sm:mx-[100px] lg:mb-[100px] sm:mb-[300px]">  <h2 className="text-[#A0522D] text-[60px] font-bold ">Wisdom</h2> </div>
+             <div className="divider lg:w-[1400px] sm:w-[450px] lg:mx-[180px] sm:mx-[100px] lg:mb-[100px] sm:mb-[300px]">  <h2 className="text-[#A0522D] text-[60px] font-bold ">Wisdom</h2> </div>
                <div className="lg:flex justify-between items-center">
                 <div>
                 <div className="mt-[-180px] mx-[10px]">
@@ -71,7 +71,7 @@ const Login = () => {
   
 /></div>
 
-                <img className="w-[300px] h-[350px] lg:ml-[700px] mt-[-180px] sm:ml-[350px]" src="https://i.ibb.co/MhHZPK3/pexels-mark-neal-2954199.jpg"></img>
+                <img className="w-[300px] h-[350px] lg:ml-[600px] mt-[-180px] sm:ml-[350px]" src="https://i.ibb.co/MhHZPK3/pexels-mark-neal-2954199.jpg"></img>
                 </div>
                 <div className="lg:w-[850px] h-[1000px] sm:w-[425px]  justify-between items-center" >
 

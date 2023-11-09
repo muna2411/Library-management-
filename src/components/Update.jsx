@@ -24,7 +24,7 @@ const Update = () => {
         console.log(updated);
 
   
-        fetch(`https://library-management-server-gdm2ylebz-munas-projects.vercel.app/book/${_id}`, {
+        fetch(`https://library-management-server-nu.vercel.app/book/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

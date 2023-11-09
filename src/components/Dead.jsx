@@ -79,7 +79,7 @@ useEffect(() => {
       const remaining = cardDetails.quantity - selectedQuantity;
       setRemainingQuantity(remaining);
 
-      fetch('https://library-management-server-gdm2ylebz-munas-projects.vercel.app/cart' ,{
+      fetch('https://library-management-server-nu.vercel.app/cart' ,{
               method: 'POST',
               headers:{
                 'content-type' : 'application/json'
@@ -91,14 +91,9 @@ useEffect(() => {
               console.log(data)
 
             })
-
-
             const modal = document.getElementById('my_modal_5');
             modal.close();
             window.location.href = '/mycart';
-              
-       
-
 }
 
 
