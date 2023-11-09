@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 const Card = ({cards}) => {
     const {image,category_name } = cards;
-
     return (
         <div>
 <div >
