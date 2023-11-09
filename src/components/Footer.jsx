@@ -1,4 +1,3 @@
-
 const Footer = () => {
     return (
         <div className="mt-[100px]">
@@ -32,5 +31,7 @@ const Footer = () => {
         </div>
     );
 };
+
+
 
 export default Footer;
