@@ -21,7 +21,6 @@ import ErrorPage from './components/ErrorPage';
 import Pdf from './components/Pdf';
 
 
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,7 +30,7 @@ const router = createBrowserRouter([
       {
         path:"/",
         element:<Home></Home>,
-        loader: () => fetch('https://library-management-server-m6953v9vm-munas-projects.vercel.app/service')
+        loader: () => fetch('https://library-management-server-5uk7mpsgj-munas-projects.vercel.app/service')
       },
       {
         path:"/addbook",
@@ -40,12 +39,12 @@ const router = createBrowserRouter([
       {
         path:'/book',
         element:<PrivateRoutes><Service></Service></PrivateRoutes>,
-        loader: () => fetch('https://library-management-server-m6953v9vm-munas-projects.vercel.app/book'),
+        loader: () => fetch('https://library-management-server-5uk7mpsgj-munas-projects.vercel.app/book'),
       },
       {
         path:'/book/:id',
         element:<PrivateRoutes><Dead></Dead></PrivateRoutes>,
-        loader: ({params}) => fetch(`https://library-management-server-m6953v9vm-munas-projects.vercel.app/book/${params.id}`)
+        loader: ({params}) => fetch(`https://library-management-server-5uk7mpsgj-munas-projects.vercel.app/book/${params.id}`)
        },
       {
          path:'/login',
@@ -59,12 +58,12 @@ const router = createBrowserRouter([
       {
         path:'/allbook',
         element:<Allbook></Allbook>,
-        loader: () => fetch('https://library-management-server-m6953v9vm-munas-projects.vercel.app/book'),
+        loader: () => fetch('https://library-management-server-5uk7mpsgj-munas-projects.vercel.app/book'),
       },
       {
         path: '/update/:id',
         element: <Update></Update>,
-        loader:({params}) => fetch(`https://library-management-server-m6953v9vm-munas-projects.vercel.app/book/${params.id}`)
+        loader:({params}) => fetch(`https://library-management-server-5uk7mpsgj-munas-projects.vercel.app/book/${params.id}`)
       },
 
      {
@@ -75,7 +74,7 @@ const router = createBrowserRouter([
       {
         path:'/mycart/:id',
         element:<PrivateRoutes><MyCart></MyCart></PrivateRoutes>,
-        loader:({params}) =>  fetch(`https://library-management-server-m6953v9vm-munas-projects.vercel.app/cart/${params.id}`)
+        loader:({params}) =>  fetch(`https://library-management-server-5uk7mpsgj-munas-projects.vercel.app/cart/${params.id}`)
       },
       {
         path:'/pdf',
